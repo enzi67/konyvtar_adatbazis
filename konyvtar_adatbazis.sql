@@ -7,11 +7,11 @@ USE konyvtaradatbazis;
 
 -- 4. feladat --
 CREATE TABLE konyvek (
-    Azonosító INTEGER PRIMARY KEY AUTO_INCREMENT,
-    Cím VARCHAR(200) NOT NULL UNIQUE,
-    Szerző VARCHAR(120),
-    Kiadási év YEAR,
-    Oldalszám INTEGER CHECK(BETWEEN 20 AND 2000),
-    Kategória ENUM("fantasy, "sci-fi, "disztópia, "történelem),
-    Értékelés FLOAT DEFAULT 5.0
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    cim VARCHAR(200) NOT NULL UNIQUE,
+    szerzo VARCHAR(120),
+    kiadasi_ev YEAR,
+    oldalszam INTEGER CHECK(BETWEEN 20 AND 2000),
+    kategoria ENUM("fantasy", "sci-fi", "disztópia", "történelem"),
+    ertekeles FLOAT DEFAULT 5.0
 )
