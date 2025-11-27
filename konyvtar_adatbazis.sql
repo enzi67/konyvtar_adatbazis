@@ -1,10 +1,14 @@
-CREATE database konyvtaradatbazis;
+DROP DATABASE IF EXISTS konyvtaradatbazis
+CREATE database konyvtaradatbazis
+    character set utf8mb4
+    collate utf8mb4_hungarian_ci;
 
 -- 3. feladat --
 USE konyvtaradatbazis;
 
 -- 4. feladat --
-CREATE TABLE konyvek (
+DROP TABLE IF EXISTS
+CREATE TABLE IF NOT EXISTS TABLE konyvek (
     id INT PRIMARY KEY AUTO_INCREMENT,
     cim VARCHAR(200) NOT NULL UNIQUE,
     szerzo VARCHAR(120),
@@ -14,7 +18,8 @@ CREATE TABLE konyvek (
 );
 
 -- 5. feladat --
-CREATE TABLE olvasok (
+drop table if exists olvasok
+CREATE TABLE IF NOT EXISTS olvasok (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nev VARCHAR(100) NOT NULL,
     szuletesi_datum DATE,
