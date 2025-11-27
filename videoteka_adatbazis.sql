@@ -1,12 +1,14 @@
 -- 2. feladat --
+DROP DATABASE IF EXISTS videotekaadatbazis;
 CREATE database videotekaadatbazis;
     character set utf8mb4
-    collate utf8mb4_hungarian_ci
+    collate utf8mb4_hungarian_ci;
 
 -- 3. feladat --
 USE videotekaadatbazis;
 
 -- 4. feladat --
+DROP TABLE IF EXISTS filmek;
 CREATE TABLE filmek (
     id INT PRIMARY KEY AUTO_INCREMENT,
     cim NOT NULL UNIQUE VARCHAR(150),
@@ -18,6 +20,7 @@ CREATE TABLE filmek (
 );
 
 -- 5. feladat --
+DROP TABLE IF EXISTS kolcsonzok;
 CREATE TABLE kolcsonzok (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nev NOT NULL VARCHAR(100),
