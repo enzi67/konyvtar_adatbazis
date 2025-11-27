@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS TABLE konyvek (
     szerzo VARCHAR(120),
     kiadasi_ev YEAR,
     oldalszam INT CHECK (oldalszam BETWEEN 20 AND 2000),
+    kategoria ENUM('fantasy', 'sci-fi', 'krimi', 'disztópia', 'történelem') NOT NULL,
     ertekeles FLOAT DEFAULT 5.0
 );
 

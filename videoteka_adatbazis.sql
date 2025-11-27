@@ -13,5 +13,16 @@ CREATE TABLE filmek (
     rendezo VARCHAR(120),
     megjelenesi_ev YEAR,
     hossz_perc INT CHECK (hossz_perc BETWEEN 30 AND 400),
-    mufaj 
+    mufaj ENUM('akcio', 'vigjatek', 'drama', 'thriller') NOT NULL,
+    imdb_ertekeles FLOAT DEFAULT 6.5,
+);
+
+-- 5. feladat --
+CREATE TABLE kolcsonzok (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nev NOT NULL VARCHAR(100),
+    email NOT NULL UNIQUE VARCHAR(120),
+    varos VARCHAR(50) DEFAULT 'Budapest',
+    aktiv ENUM('igen', 'nem') DEFAULT('igen'),
+    regisztracio DATETIME DEFAULT CURRENT_TIMESTAMP
 );
