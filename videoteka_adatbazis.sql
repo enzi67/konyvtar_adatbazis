@@ -13,5 +13,5 @@ CREATE TABLE filmek (
     rendezo VARCHAR(120),
     megjelenesi_ev YEAR,
     hossz_perc INT CHECK (hossz_perc BETWEEN 30 AND 400),
-    mufaj
+    mufaj 
 );
